@@ -9,9 +9,8 @@
 (defvar backup-dir (concat "/tmp/emacs_backups/" (user-login-name) "/"))
 (setq backup-directory-alist (list (cons "." backup-dir)))
 
-(setq default-frame-alist
-      '( (cursor-type . bar)
-	 (alpha . (95 50)) ))
+(set-alpha 96)
+(setq default-frame-alist (cons '(cursor-type . bar) default-frame-alist))
 
 (require 'color-theme)
 (eval-after-load "color-theme"

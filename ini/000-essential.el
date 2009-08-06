@@ -5,6 +5,9 @@
 ;;; Purpose: Essential Emacs Functions and bindings
 ;;; ==================================================================
 
+(defun is-emacs-23 ()
+  (string-equal (substring emacs-version 0 2) "23"))
+
 ;;; Define autolist ==================================================
 
 (defun make-auto (pattern mode)

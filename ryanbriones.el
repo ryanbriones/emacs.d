@@ -9,8 +9,14 @@
 (defvar backup-dir (concat "/tmp/emacs_backups/" (user-login-name) "/"))
 (setq backup-directory-alist (list (cons "." backup-dir)))
 
-(set-alpha 96)
 (setq default-frame-alist (cons '(cursor-type . bar) default-frame-alist))
+
+(if (is-emacs-23)
+    (progn
+      (set-alpha 96)
+      
+      (require 'linum)
+      (global-linum-mode 1) ) )
 
 (require 'color-theme)
 (eval-after-load "color-theme"

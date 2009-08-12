@@ -16,7 +16,8 @@
       (set-alpha 96)
       
       (require 'linum)
-      (global-linum-mode 1) ) )
+      (global-linum-mode 1) 
+      (setq linum-format "%4d ") ) ) 
 
 (require 'color-theme)
 (eval-after-load "color-theme"

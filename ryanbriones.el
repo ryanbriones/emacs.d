@@ -17,7 +17,12 @@
       
       (require 'linum)
       (global-linum-mode 1) 
-      (setq linum-format "%4d ") ) ) 
+      (setq linum-format "%4d ") ) )
+
+(set-face-attribute 'default nil
+		    :family "Bitstream Vera Sans Mono"
+		    :height 150)
+
 
 (require 'color-theme)
 (eval-after-load "color-theme"
